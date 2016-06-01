@@ -1,0 +1,355 @@
+2016-06-01 12:28:35 [127.0.0.1][-][ktiub5oahvftfu6vi8o8709eg7][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[HY000] [1049] Unknown database 'yii2advanced'' in C:\OpenServer\domains\yii-test.loc\vendor\yiisoft\yii2\db\Connection.php:600
+Stack trace:
+#0 C:\OpenServer\domains\yii-test.loc\vendor\yiisoft\yii2\db\Connection.php(600): PDO->__construct('mysql:host=loca...', 'root', '', NULL)
+#1 C:\OpenServer\domains\yii-test.loc\vendor\yiisoft\yii2\db\Connection.php(542): yii\db\Connection->createPdoInstance()
+#2 C:\OpenServer\domains\yii-test.loc\vendor\yiisoft\yii2\db\Connection.php(861): yii\db\Connection->open()
+#3 C:\OpenServer\domains\yii-test.loc\vendor\yiisoft\yii2\db\Connection.php(848): yii\db\Connection->getMasterPdo()
+#4 C:\OpenServer\domains\yii-test.loc\vendor\yiisoft\yii2\db\Schema.php(480): yii\db\Connection->getSlavePdo()
+#5 C:\OpenServer\domains\yii-test.loc\vendor\yiisoft\yii2\db\Connection.php(757): yii\db\Schema->quoteValue('<span class="st...')
+#6 C:\OpenServer\domains\yii-test.loc\vendor\yiisoft\yii2\db\Command.php(175): yii\db\Connection->quoteValue('<span class="st...')
+#7 C:\OpenServer\domains\yii-test.loc\vendor\yiisoft\yii2\db\Command.php(869): yii\db\Command->getRawSql()
+#8 C:\OpenServer\domains\yii-test.loc\vendor\yiisoft\yii2\db\Command.php(388): yii\db\Command->queryInternal('<span class="st...', '<span class="nu...')
+#9 C:\OpenServer\domains\yii-test.loc\vendor\yiisoft\yii2\db\Query.php(367): yii\db\Command->queryScalar()
+#10 C:\OpenServer\domains\yii-test.loc\vendor\yiisoft\yii2\validators\UniqueValidator.php(112): yii\db\Query->exists()
+#11 C:\OpenServer\domains\yii-test.loc\vendor\yiisoft\yii2\validators\Validator.php(252): yii\validators\UniqueValidator->validateAttribute(Object(frontend\models\SignupForm), '<span class="st...')
+#12 C:\OpenServer\domains\yii-test.loc\vendor\yiisoft\yii2\base\Model.php(356): yii\validators\Validator->validateAttributes(Object(frontend\models\SignupForm), '[<span class="s...')
+#13 C:\OpenServer\domains\yii-test.loc\frontend\models\SignupForm.php(46): yii\base\Model->validate()
+#14 C:\OpenServer\domains\yii-test.loc\frontend\controllers\SiteController.php(153): frontend\models\SignupForm->signup()
+#15 [internal function]: frontend\controllers\SiteController->actionSignup()
+#16 C:\OpenServer\domains\yii-test.loc\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array('[<span class="t...', '[]')
+#17 C:\OpenServer\domains\yii-test.loc\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams('[]')
+#18 C:\OpenServer\domains\yii-test.loc\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('<span class="st...', '[]')
+#19 C:\OpenServer\domains\yii-test.loc\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('<span class="st...', '[]')
+#20 C:\OpenServer\domains\yii-test.loc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#21 C:\OpenServer\domains\yii-test.loc\frontend\web\index.php(18): yii\base\Application->run()
+#22 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[HY000] [1049] Unknown database 'yii2advanced'' in C:\OpenServer\domains\yii-test.loc\vendor\yiisoft\yii2\db\Connection.php:547
+Stack trace:
+#0 C:\OpenServer\domains\yii-test.loc\vendor\yiisoft\yii2\db\Connection.php(861): yii\db\Connection->open()
+#1 C:\OpenServer\domains\yii-test.loc\vendor\yiisoft\yii2\db\Connection.php(848): yii\db\Connection->getMasterPdo()
+#2 C:\OpenServer\domains\yii-test.loc\vendor\yiisoft\yii2\db\Schema.php(480): yii\db\Connection->getSlavePdo()
+#3 C:\OpenServer\domains\yii-test.loc\vendor\yiisoft\yii2\db\Connection.php(757): yii\db\Schema->quoteValue('<span class="st...')
+#4 C:\OpenServer\domains\yii-test.loc\vendor\yiisoft\yii2\db\Command.php(175): yii\db\Connection->quoteValue('<span class="st...')
+#5 C:\OpenServer\domains\yii-test.loc\vendor\yiisoft\yii2\db\Command.php(869): yii\db\Command->getRawSql()
+#6 C:\OpenServer\domains\yii-test.loc\vendor\yiisoft\yii2\db\Command.php(388): yii\db\Command->queryInternal('<span class="st...', '<span class="nu...')
+#7 C:\OpenServer\domains\yii-test.loc\vendor\yiisoft\yii2\db\Query.php(367): yii\db\Command->queryScalar()
+#8 C:\OpenServer\domains\yii-test.loc\vendor\yiisoft\yii2\validators\UniqueValidator.php(112): yii\db\Query->exists()
+#9 C:\OpenServer\domains\yii-test.loc\vendor\yiisoft\yii2\validators\Validator.php(252): yii\validators\UniqueValidator->validateAttribute(Object(frontend\models\SignupForm), '<span class="st...')
+#10 C:\OpenServer\domains\yii-test.loc\vendor\yiisoft\yii2\base\Model.php(356): yii\validators\Validator->validateAttributes(Object(frontend\models\SignupForm), '[<span class="s...')
+#11 C:\OpenServer\domains\yii-test.loc\frontend\models\SignupForm.php(46): yii\base\Model->validate()
+#12 C:\OpenServer\domains\yii-test.loc\frontend\controllers\SiteController.php(153): frontend\models\SignupForm->signup()
+#13 [internal function]: frontend\controllers\SiteController->actionSignup()
+#14 C:\OpenServer\domains\yii-test.loc\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array('[<span class="t...', '[]')
+#15 C:\OpenServer\domains\yii-test.loc\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams('[]')
+#16 C:\OpenServer\domains\yii-test.loc\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('<span class="st...', '[]')
+#17 C:\OpenServer\domains\yii-test.loc\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('<span class="st...', '[]')
+#18 C:\OpenServer\domains\yii-test.loc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#19 C:\OpenServer\domains\yii-test.loc\frontend\web\index.php(18): yii\base\Application->run()
+#20 {main}
+Additional Information:
+
+2016-06-01 12:28:34 [127.0.0.1][-][ktiub5oahvftfu6vi8o8709eg7][info][application] $_POST = [
+    '_csrf' => 'Vk56Qml1Q1AfL04nHjECGSAISSVeGSAnMgEpBioeKSQTNBQdBxQNEg=='
+    'SignupForm' => [
+        'username' => 'gfbfb'
+        'email' => 'dgbd@fb.fdb'
+        'password' => 'dfbdfbdfb'
+    ]
+    'signup-button' => ''
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'ktiub5oahvftfu6vi8o8709eg7'
+    '_csrf' => 'd6ba6fea03dd11a54667514d6e4878d5a66a40aae45a7297b5221040437189baa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Ia4ewDAIvF3g7lcwdOSDCkjtEzn_naNB\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'hoymrix'
+    '__captcha/site/captchacount' => 1
+    '__returnUrl' => '/admin'
+]
+
+$_SERVER = [
+    'REDIRECT_REDIRECT_STATUS' => '200'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'yii-test.loc'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '183'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ORIGIN' => 'http://yii-test.loc'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.63 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://yii-test.loc/site/signup'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'uk-UA,uk;q=0.8,ru;q=0.6,en-US;q=0.4,en;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=ktiub5oahvftfu6vi8o8709eg7; _csrf=d6ba6fea03dd11a54667514d6e4878d5a66a40aae45a7297b5221040437189baa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Ia4ewDAIvF3g7lcwdOSDCkjtEzn_naNB%22%3B%7D'
+    'PATH' => 'c:\\openserver\\modules\\php\\PHP-5.6-x64\\ext;c:\\openserver\\modules\\php\\PHP-5.6-x64\\pear;c:\\openserver\\modules\\php\\PHP-5.6-x64\\pear\\bin;c:\\openserver\\modules\\php\\PHP-5.6-x64;c:\\openserver\\modules\\imagemagick;c:\\openserver\\modules\\wget\\bin;c:\\openserver\\modules\\git;c:\\openserver\\modules\\git\\bin;c:\\openserver\\modules\\git\\mingw\\bin;c:\\openserver\\modules\\git\\cmd;c:\\openserver\\modules\\database\\MySQL-5.5\\bin;c:\\openserver\\modules\\http\\Apache-2.4-x64\\bin;c:\\openserver\\modules\\http\\Apache-2.4-x64;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'yii-test.loc'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OpenServer/domains/yii-test.loc'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OpenServer/domains/yii-test.loc'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OpenServer/domains/yii-test.loc/frontend/web/index.php'
+    'REMOTE_PORT' => '8430'
+    'REDIRECT_URL' => '/frontend/web/site/signup'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/site/signup'
+    'SCRIPT_NAME' => '/frontend/web/index.php'
+    'PHP_SELF' => '/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1464773314.939
+    'REQUEST_TIME' => 1464773314
+    'argv' => []
+    'argc' => 0
+]
+2016-06-01 12:28:58 [127.0.0.1][-][ktiub5oahvftfu6vi8o8709eg7][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[HY000] [1049] Unknown database 'yii2advanced'' in C:\OpenServer\domains\yii-test.loc\vendor\yiisoft\yii2\db\Connection.php:600
+Stack trace:
+#0 C:\OpenServer\domains\yii-test.loc\vendor\yiisoft\yii2\db\Connection.php(600): PDO->__construct('mysql:host=loca...', 'root', '', NULL)
+#1 C:\OpenServer\domains\yii-test.loc\vendor\yiisoft\yii2\db\Connection.php(542): yii\db\Connection->createPdoInstance()
+#2 C:\OpenServer\domains\yii-test.loc\vendor\yiisoft\yii2\db\Connection.php(861): yii\db\Connection->open()
+#3 C:\OpenServer\domains\yii-test.loc\vendor\yiisoft\yii2\db\Connection.php(848): yii\db\Connection->getMasterPdo()
+#4 C:\OpenServer\domains\yii-test.loc\vendor\yiisoft\yii2\db\Schema.php(480): yii\db\Connection->getSlavePdo()
+#5 C:\OpenServer\domains\yii-test.loc\vendor\yiisoft\yii2\db\Connection.php(757): yii\db\Schema->quoteValue('<span class="st...')
+#6 C:\OpenServer\domains\yii-test.loc\vendor\yiisoft\yii2\db\Command.php(175): yii\db\Connection->quoteValue('<span class="st...')
+#7 C:\OpenServer\domains\yii-test.loc\vendor\yiisoft\yii2\db\Command.php(869): yii\db\Command->getRawSql()
+#8 C:\OpenServer\domains\yii-test.loc\vendor\yiisoft\yii2\db\Command.php(388): yii\db\Command->queryInternal('<span class="st...', '<span class="nu...')
+#9 C:\OpenServer\domains\yii-test.loc\vendor\yiisoft\yii2\db\Query.php(367): yii\db\Command->queryScalar()
+#10 C:\OpenServer\domains\yii-test.loc\vendor\yiisoft\yii2\validators\UniqueValidator.php(112): yii\db\Query->exists()
+#11 C:\OpenServer\domains\yii-test.loc\vendor\yiisoft\yii2\validators\Validator.php(252): yii\validators\UniqueValidator->validateAttribute(Object(frontend\models\SignupForm), '<span class="st...')
+#12 C:\OpenServer\domains\yii-test.loc\vendor\yiisoft\yii2\base\Model.php(356): yii\validators\Validator->validateAttributes(Object(frontend\models\SignupForm), '[<span class="s...')
+#13 C:\OpenServer\domains\yii-test.loc\frontend\models\SignupForm.php(46): yii\base\Model->validate()
+#14 C:\OpenServer\domains\yii-test.loc\frontend\controllers\SiteController.php(153): frontend\models\SignupForm->signup()
+#15 [internal function]: frontend\controllers\SiteController->actionSignup()
+#16 C:\OpenServer\domains\yii-test.loc\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array('[<span class="t...', '[]')
+#17 C:\OpenServer\domains\yii-test.loc\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams('[]')
+#18 C:\OpenServer\domains\yii-test.loc\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('<span class="st...', '[]')
+#19 C:\OpenServer\domains\yii-test.loc\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('<span class="st...', '[]')
+#20 C:\OpenServer\domains\yii-test.loc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#21 C:\OpenServer\domains\yii-test.loc\frontend\web\index.php(18): yii\base\Application->run()
+#22 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[HY000] [1049] Unknown database 'yii2advanced'' in C:\OpenServer\domains\yii-test.loc\vendor\yiisoft\yii2\db\Connection.php:547
+Stack trace:
+#0 C:\OpenServer\domains\yii-test.loc\vendor\yiisoft\yii2\db\Connection.php(861): yii\db\Connection->open()
+#1 C:\OpenServer\domains\yii-test.loc\vendor\yiisoft\yii2\db\Connection.php(848): yii\db\Connection->getMasterPdo()
+#2 C:\OpenServer\domains\yii-test.loc\vendor\yiisoft\yii2\db\Schema.php(480): yii\db\Connection->getSlavePdo()
+#3 C:\OpenServer\domains\yii-test.loc\vendor\yiisoft\yii2\db\Connection.php(757): yii\db\Schema->quoteValue('<span class="st...')
+#4 C:\OpenServer\domains\yii-test.loc\vendor\yiisoft\yii2\db\Command.php(175): yii\db\Connection->quoteValue('<span class="st...')
+#5 C:\OpenServer\domains\yii-test.loc\vendor\yiisoft\yii2\db\Command.php(869): yii\db\Command->getRawSql()
+#6 C:\OpenServer\domains\yii-test.loc\vendor\yiisoft\yii2\db\Command.php(388): yii\db\Command->queryInternal('<span class="st...', '<span class="nu...')
+#7 C:\OpenServer\domains\yii-test.loc\vendor\yiisoft\yii2\db\Query.php(367): yii\db\Command->queryScalar()
+#8 C:\OpenServer\domains\yii-test.loc\vendor\yiisoft\yii2\validators\UniqueValidator.php(112): yii\db\Query->exists()
+#9 C:\OpenServer\domains\yii-test.loc\vendor\yiisoft\yii2\validators\Validator.php(252): yii\validators\UniqueValidator->validateAttribute(Object(frontend\models\SignupForm), '<span class="st...')
+#10 C:\OpenServer\domains\yii-test.loc\vendor\yiisoft\yii2\base\Model.php(356): yii\validators\Validator->validateAttributes(Object(frontend\models\SignupForm), '[<span class="s...')
+#11 C:\OpenServer\domains\yii-test.loc\frontend\models\SignupForm.php(46): yii\base\Model->validate()
+#12 C:\OpenServer\domains\yii-test.loc\frontend\controllers\SiteController.php(153): frontend\models\SignupForm->signup()
+#13 [internal function]: frontend\controllers\SiteController->actionSignup()
+#14 C:\OpenServer\domains\yii-test.loc\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array('[<span class="t...', '[]')
+#15 C:\OpenServer\domains\yii-test.loc\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams('[]')
+#16 C:\OpenServer\domains\yii-test.loc\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('<span class="st...', '[]')
+#17 C:\OpenServer\domains\yii-test.loc\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('<span class="st...', '[]')
+#18 C:\OpenServer\domains\yii-test.loc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#19 C:\OpenServer\domains\yii-test.loc\frontend\web\index.php(18): yii\base\Application->run()
+#20 {main}
+Additional Information:
+
+2016-06-01 12:28:57 [127.0.0.1][-][ktiub5oahvftfu6vi8o8709eg7][info][application] $_POST = [
+    '_csrf' => 'Li1KM2c1MURnTH5WEHFwDVhreVRQWVIzSmIZdyReWzBrVyRsCVR/Bg=='
+    'SignupForm' => [
+        'username' => 'gfbfb'
+        'email' => 'dgbd@fb.fdb'
+        'password' => 'hfghgfh'
+    ]
+    'signup-button' => ''
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'ktiub5oahvftfu6vi8o8709eg7'
+    '_csrf' => 'd6ba6fea03dd11a54667514d6e4878d5a66a40aae45a7297b5221040437189baa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Ia4ewDAIvF3g7lcwdOSDCkjtEzn_naNB\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'hoymrix'
+    '__captcha/site/captchacount' => 1
+    '__returnUrl' => '/admin'
+]
+
+$_SERVER = [
+    'REDIRECT_REDIRECT_STATUS' => '200'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'yii-test.loc'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '183'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ORIGIN' => 'http://yii-test.loc'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.63 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://yii-test.loc/site/signup'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'uk-UA,uk;q=0.8,ru;q=0.6,en-US;q=0.4,en;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=ktiub5oahvftfu6vi8o8709eg7; _csrf=d6ba6fea03dd11a54667514d6e4878d5a66a40aae45a7297b5221040437189baa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Ia4ewDAIvF3g7lcwdOSDCkjtEzn_naNB%22%3B%7D'
+    'PATH' => 'c:\\openserver\\modules\\php\\PHP-5.6-x64\\ext;c:\\openserver\\modules\\php\\PHP-5.6-x64\\pear;c:\\openserver\\modules\\php\\PHP-5.6-x64\\pear\\bin;c:\\openserver\\modules\\php\\PHP-5.6-x64;c:\\openserver\\modules\\imagemagick;c:\\openserver\\modules\\wget\\bin;c:\\openserver\\modules\\git;c:\\openserver\\modules\\git\\bin;c:\\openserver\\modules\\git\\mingw\\bin;c:\\openserver\\modules\\git\\cmd;c:\\openserver\\modules\\database\\MySQL-5.5\\bin;c:\\openserver\\modules\\http\\Apache-2.4-x64\\bin;c:\\openserver\\modules\\http\\Apache-2.4-x64;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'yii-test.loc'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OpenServer/domains/yii-test.loc'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OpenServer/domains/yii-test.loc'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OpenServer/domains/yii-test.loc/frontend/web/index.php'
+    'REMOTE_PORT' => '8444'
+    'REDIRECT_URL' => '/frontend/web/site/signup'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/site/signup'
+    'SCRIPT_NAME' => '/frontend/web/index.php'
+    'PHP_SELF' => '/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1464773337.838
+    'REQUEST_TIME' => 1464773337
+    'argv' => []
+    'argc' => 0
+]
+2016-06-01 12:35:50 [127.0.0.1][-][ktiub5oahvftfu6vi8o8709eg7][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'yii-test.loc.user' doesn't exist' in C:\OpenServer\domains\yii-test.loc\vendor\yiisoft\yii2\db\Command.php:900
+Stack trace:
+#0 C:\OpenServer\domains\yii-test.loc\vendor\yiisoft\yii2\db\Command.php(900): PDOStatement->execute()
+#1 C:\OpenServer\domains\yii-test.loc\vendor\yiisoft\yii2\db\Command.php(388): yii\db\Command->queryInternal('<span class="st...', '<span class="nu...')
+#2 C:\OpenServer\domains\yii-test.loc\vendor\yiisoft\yii2\db\Query.php(367): yii\db\Command->queryScalar()
+#3 C:\OpenServer\domains\yii-test.loc\vendor\yiisoft\yii2\validators\UniqueValidator.php(112): yii\db\Query->exists()
+#4 C:\OpenServer\domains\yii-test.loc\vendor\yiisoft\yii2\validators\Validator.php(252): yii\validators\UniqueValidator->validateAttribute(Object(frontend\models\SignupForm), '<span class="st...')
+#5 C:\OpenServer\domains\yii-test.loc\vendor\yiisoft\yii2\base\Model.php(356): yii\validators\Validator->validateAttributes(Object(frontend\models\SignupForm), '[<span class="s...')
+#6 C:\OpenServer\domains\yii-test.loc\frontend\models\SignupForm.php(46): yii\base\Model->validate()
+#7 C:\OpenServer\domains\yii-test.loc\frontend\controllers\SiteController.php(153): frontend\models\SignupForm->signup()
+#8 [internal function]: frontend\controllers\SiteController->actionSignup()
+#9 C:\OpenServer\domains\yii-test.loc\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array('[<span class="t...', '[]')
+#10 C:\OpenServer\domains\yii-test.loc\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams('[]')
+#11 C:\OpenServer\domains\yii-test.loc\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('<span class="st...', '[]')
+#12 C:\OpenServer\domains\yii-test.loc\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('<span class="st...', '[]')
+#13 C:\OpenServer\domains\yii-test.loc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#14 C:\OpenServer\domains\yii-test.loc\frontend\web\index.php(18): yii\base\Application->run()
+#15 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'yii-test.loc.user' doesn't exist
+The SQL being executed was: SELECT EXISTS(SELECT * FROM `user` WHERE `username`='gfbfb')' in C:\OpenServer\domains\yii-test.loc\vendor\yiisoft\yii2\db\Schema.php:633
+Stack trace:
+#0 C:\OpenServer\domains\yii-test.loc\vendor\yiisoft\yii2\db\Command.php(915): yii\db\Schema->convertException(Object(PDOException), 'SELECT EXISTS(S...')
+#1 C:\OpenServer\domains\yii-test.loc\vendor\yiisoft\yii2\db\Command.php(388): yii\db\Command->queryInternal('<span class="st...', '<span class="nu...')
+#2 C:\OpenServer\domains\yii-test.loc\vendor\yiisoft\yii2\db\Query.php(367): yii\db\Command->queryScalar()
+#3 C:\OpenServer\domains\yii-test.loc\vendor\yiisoft\yii2\validators\UniqueValidator.php(112): yii\db\Query->exists()
+#4 C:\OpenServer\domains\yii-test.loc\vendor\yiisoft\yii2\validators\Validator.php(252): yii\validators\UniqueValidator->validateAttribute(Object(frontend\models\SignupForm), '<span class="st...')
+#5 C:\OpenServer\domains\yii-test.loc\vendor\yiisoft\yii2\base\Model.php(356): yii\validators\Validator->validateAttributes(Object(frontend\models\SignupForm), '[<span class="s...')
+#6 C:\OpenServer\domains\yii-test.loc\frontend\models\SignupForm.php(46): yii\base\Model->validate()
+#7 C:\OpenServer\domains\yii-test.loc\frontend\controllers\SiteController.php(153): frontend\models\SignupForm->signup()
+#8 [internal function]: frontend\controllers\SiteController->actionSignup()
+#9 C:\OpenServer\domains\yii-test.loc\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array('[<span class="t...', '[]')
+#10 C:\OpenServer\domains\yii-test.loc\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams('[]')
+#11 C:\OpenServer\domains\yii-test.loc\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('<span class="st...', '[]')
+#12 C:\OpenServer\domains\yii-test.loc\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('<span class="st...', '[]')
+#13 C:\OpenServer\domains\yii-test.loc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#14 C:\OpenServer\domains\yii-test.loc\frontend\web\index.php(18): yii\base\Application->run()
+#15 {main}
+Additional Information:
+Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'yii-test.loc.user' doesn't exist
+)
+
+2016-06-01 12:35:50 [127.0.0.1][-][ktiub5oahvftfu6vi8o8709eg7][info][application] $_POST = [
+    '_csrf' => 'Li1KM2c1MURnTH5WEHFwDVhreVRQWVIzSmIZdyReWzBrVyRsCVR/Bg=='
+    'SignupForm' => [
+        'username' => 'gfbfb'
+        'email' => 'dgbd@fb.fdb'
+        'password' => 'hfghgfh'
+    ]
+    'signup-button' => ''
+]
+
+$_COOKIE = [
+    'PHPSESSID' => 'ktiub5oahvftfu6vi8o8709eg7'
+    '_csrf' => 'd6ba6fea03dd11a54667514d6e4878d5a66a40aae45a7297b5221040437189baa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Ia4ewDAIvF3g7lcwdOSDCkjtEzn_naNB\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'hoymrix'
+    '__captcha/site/captchacount' => 1
+    '__returnUrl' => '/admin'
+]
+
+$_SERVER = [
+    'REDIRECT_REDIRECT_STATUS' => '200'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'yii-test.loc'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '183'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ORIGIN' => 'http://yii-test.loc'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.63 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://yii-test.loc/site/signup'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'uk-UA,uk;q=0.8,ru;q=0.6,en-US;q=0.4,en;q=0.2'
+    'HTTP_COOKIE' => 'PHPSESSID=ktiub5oahvftfu6vi8o8709eg7; _csrf=d6ba6fea03dd11a54667514d6e4878d5a66a40aae45a7297b5221040437189baa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Ia4ewDAIvF3g7lcwdOSDCkjtEzn_naNB%22%3B%7D'
+    'PATH' => 'c:\\openserver\\modules\\php\\PHP-5.6-x64\\ext;c:\\openserver\\modules\\php\\PHP-5.6-x64\\pear;c:\\openserver\\modules\\php\\PHP-5.6-x64\\pear\\bin;c:\\openserver\\modules\\php\\PHP-5.6-x64;c:\\openserver\\modules\\imagemagick;c:\\openserver\\modules\\wget\\bin;c:\\openserver\\modules\\git;c:\\openserver\\modules\\git\\bin;c:\\openserver\\modules\\git\\mingw\\bin;c:\\openserver\\modules\\git\\cmd;c:\\openserver\\modules\\database\\MySQL-5.5\\bin;c:\\openserver\\modules\\http\\Apache-2.4-x64\\bin;c:\\openserver\\modules\\http\\Apache-2.4-x64;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'yii-test.loc'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OpenServer/domains/yii-test.loc'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OpenServer/domains/yii-test.loc'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OpenServer/domains/yii-test.loc/frontend/web/index.php'
+    'REMOTE_PORT' => '8633'
+    'REDIRECT_URL' => '/frontend/web/site/signup'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/site/signup'
+    'SCRIPT_NAME' => '/frontend/web/index.php'
+    'PHP_SELF' => '/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1464773750.186
+    'REQUEST_TIME' => 1464773750
+    'argv' => []
+    'argc' => 0
+]
